@@ -34,7 +34,7 @@ $(function() {
 		}));
 
 		$this.css({
-			paddingRight: 60
+			paddingRight: 100
 		});
 		$this.after($("<div/>", {
 			html: 'Show',
