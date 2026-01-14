@@ -1,18 +1,24 @@
-html,body {
+html, body {
 	height: 100%;
+	margin: 0;
+	padding: 0;
 }
 
 body.my-login-page {
 	background-color: #f7f9fb;
 	font-size: 14px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
+/* Logo / Brand */
 .my-login-page .brand {
 	width: 100px;
 	height: 100px;
 	overflow: hidden;
-	border-radius: 100%;
-	margin: 100px auto;
+	border-radius: 50%;
+	margin: 40px auto;
 	box-shadow: 0 4px 8px rgba(0,0,0,.05);
 	position: relative;
 	z-index: 1;
@@ -20,51 +26,89 @@ body.my-login-page {
 
 .my-login-page .brand img {
 	width: 100%;
+	height: auto;
 }
 
+/* Card container */
 .my-login-page .card-wrapper {
 	width: 600px;
+	max-width: 95%;
+	margin: auto;
 }
 
+/* Card */
 .my-login-page .card {
 	border-color: transparent;
 	box-shadow: 0 4px 8px rgba(0,0,0,.05);
+	border-radius: 10px;
 }
 
 .my-login-page .card.fat {
-	padding: 10px;
+	padding: 15px;
 }
 
 .my-login-page .card .card-title {
-	margin-bottom: 30px;
+	margin-bottom: 25px;
+	text-align: center;
 }
 
+/* Form */
 .my-login-page .form-control {
-	border-width: 2.3px;
+	border-width: 2px;
+	padding: 10px;
+	font-size: 14px;
 }
 
 .my-login-page .form-group label {
 	width: 100%;
 }
 
+/* Button */
 .my-login-page .btn.btn-block {
-	padding: 12px 10px;
+	padding: 12px;
+	font-size: 15px;
 }
 
+/* Footer */
 .my-login-page .footer {
-	margin: 40px 0;
+	margin: 20px 0;
 	color: #888;
 	text-align: center;
+	font-size: 13px;
 }
 
-@media screen and (max-width: 425px) {
+/* 📱 Tablets & Phones */
+@media (max-width: 768px) {
+	.my-login-page .brand {
+		width: 80px;
+		height: 80px;
+		margin: 30px auto;
+	}
+
 	.my-login-page .card-wrapper {
 		width: 90%;
-		margin: 0 auto;
 	}
 }
 
-@media screen and (max-width: 320px) {
+/* 📱 Small Phones */
+@media (max-width: 425px) {
+	body.my-login-page {
+		font-size: 13px;
+	}
+
+	.my-login-page .brand {
+		width: 70px;
+		height: 70px;
+		margin: 20px auto;
+	}
+
+	.my-login-page .card.fat {
+		padding: 10px;
+	}
+}
+
+/* 📱 Very Small Phones */
+@media (max-width: 320px) {
 	.my-login-page .card.fat {
 		padding: 0;
 	}
@@ -72,4 +116,10 @@ body.my-login-page {
 	.my-login-page .card.fat .card-body {
 		padding: 15px;
 	}
+
+	.my-login-page .btn.btn-block {
+		padding: 10px;
+		font-size: 14px;
+	}
 }
+
